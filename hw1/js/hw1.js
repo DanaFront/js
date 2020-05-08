@@ -1,12 +1,12 @@
 // Задача 1
-let sqr1;
-let height1 = 25, width = 15;
+let sqrAll = 10 * 100;
+let sqr1 = 25 * 15;
 
-sqr1 = 10 * 100;
-sqr2 = height1 * width;
+let res1 = parseInt(sqrAll / sqr1);
+let resg = sqr1 * res1;
 
-res1 = sqr1 - sqr2;
-console.log(res1 + " м2 осталось незанято");
+let resSq = sqrAll - resg;
+console.log(resSq + " м2 осталось незанято");
 
 // Задача 2
 let oval1;
