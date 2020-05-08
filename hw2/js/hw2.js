@@ -49,7 +49,7 @@ if (num == 0) {
 } else if (num >= 100 && num <= 999) {
     console.log("Положительно трехзначное число"); 
 } else if (num < 0 && num > -10) {
-	console.log("Положительно однозначное число"); 
+	console.log("Отрицательно однозначное число"); 
 } else if (num < -10 && num > -100) {
     console.log("Отрицательно двузначное число"); 
 } else if (num <= -100 && num >= -999) {
@@ -62,15 +62,15 @@ if (num == 0) {
 // Задача 4
 
 for (let i = 1; i <= 100; i++) {
-if  (i%3 == 0 && !(i%5) == 0) {
-    console.log("Tree");
-    continue;
-} else if (i%5 == 0 && !(i%3) == 0) {
-    console.log("Five");
-    continue;
-} else if (i%3 == 0 && i%5 == 0) {
-    console.log("TreeFive");
-    continue;
-}
+    if  (i%3 == 0 && !(i%5) == 0) {
+        console.log("Tree");
+        continue;
+    } else if (i%5 == 0 && !(i%3) == 0) {
+        console.log("Five");
+        continue;
+    } else if (i%3 == 0 && i%5 == 0) {
+        console.log("TreeFive");
+        continue;
+    }
     console.log(i);
 }
