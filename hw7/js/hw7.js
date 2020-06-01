@@ -1,6 +1,81 @@
 // Задача 1
 
-let p = document.createElement("p");
+setInterval(function time() {  
+    let clock = document.getElementById('time');
+    let date = new Date();  
+    let h = date.getHours();  
+    let m = date.getMinutes();  
+    let s = date.getSeconds(); 
 
-let dateObj = new Date();
-console.log(dateObj);
+    h = (h < 10) ? '0' + h : h;  
+    m = (m < 10) ? '0' + m : m; 
+    s = (s < 10) ? '0' + s : s; 
+
+    clock.children[0].innerHTML = h; 
+    clock.children[1].innerHTML = m;
+    clock.children[2].innerHTML = s;
+    }, 1000);
+    
+    
+// Задача 2
+
+let arr = [
+    {
+        name: 'Очки',
+        art: 123,
+        price: 1000,
+        foto: '1.jpg',
+    }, {
+        name: 'Кепка',
+        art: 456,
+        price: 2000,
+        foto: '2.jpg',
+    }, {
+        name: 'Сумка',
+        art: 789,
+        price: 3000,
+        foto: '3.jpg',
+    }
+];
+
+function goods(arr1) {
+    let tagGoods = document.getElementById("goods");
+    tagGoods.innerHTML = "";
+    tagGoods.style.display = "flex";
+	tagGoods.style.flexWrap = "wrap";
+
+	
+	for(let i = 0; i < arr1.length; i++) {
+		let name = document.createElement('h1');
+        name.innerText = arr1[i].name;
+        
+        let art = document.createElement('div');
+        art.innerText = arr1[i].art;
+        
+        let price = document.createElement('div');
+		price.innerText = arr1[i].price;
+		
+		let foto = document.createElement('img');
+        foto.setAttribute("src", "img/" + arr1[i].foto);
+        foto.style.width = "200px";
+        foto.style.height = "200px";
+		
+		let div = document.createElement('div');
+		
+        div.style.width = "300px";
+        div.style.height = "300px";
+		
+        div.appendChild(name);
+        div.appendChild(art);
+        div.appendChild(price);
+        div.appendChild(foto);
+		
+		tagGoods.appendChild(div);
+	}	
+} 
+
+goods(arr);
+
+
+// Задача 3
+
