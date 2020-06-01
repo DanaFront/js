@@ -1,5 +1,3 @@
-// Ничего не работает( я не знаю почему
-
 // Задача 1
 
 function compare(arr1, arr2) {
@@ -24,17 +22,16 @@ console.log(compare(ar1, ar2));
 
 // Задача 2
 
-let arr3 = [1, 6, 2];
-
 function range(el1, el2, el3) {
     let arr4 = [];
     for (let j = el1; j < el2; j += el3) {
-        arr4.push(i);
+        arr4.push(j);
     }
     return arr4;
 }
 
-console.log(range(arr3));
+let arr3 = range(1, 6, 2);
+console.log(arr3);
 
 
 // Задача 3
