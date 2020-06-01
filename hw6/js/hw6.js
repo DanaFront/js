@@ -6,10 +6,10 @@ let a = {
 }
 
 function foo(obj, count, num) {
-    let res = [];
-    let obj1 = {...obj};
+    let res = []; 
     for (let i = 0; i < num; i++) {
-        obj1.count = i; // Что тут надо, я не поняла(
+        let obj1 = {...obj};
+        obj1.count = i;
         res.push(obj1);
     }
     return res;
@@ -20,16 +20,23 @@ console.log(foo(a, 'count', 10));
 
 // Задача 2
 
-function counter(){
-	let i = 0;
-	
-	return function(){
-		return ++i;
-	}		
+function counter(max, min) {
+    let arr1 = [];
+    let b = [];
+
+    for (let i = min; i < max; i++) {
+        arr1.push(i);
+    }
+        function random() {
+            let rand = Math.floor(min + Math.random() * (max - min));
+            b.push(arr1[rand]);
+            return arr1.splice(rand);
+        }
+ 	
 }
 
-let res1 = counter();
-console.log(counter());
+let res1 = counter(1, 100);
+console.log(res1);
 
 
 // Задача 3
