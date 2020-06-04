@@ -77,5 +77,42 @@ function goods(arr1) {
 goods(arr);
 
 
-// Задача 3
+// Задача 3 
 
+// Я знаю это примитивно, в будущем исправлюсь)
+
+
+setTimeout( function() {
+    document.querySelector('#traffic .red').classList.add('active');
+}, 1000);
+setTimeout( function() {
+    document.querySelector('#traffic .red').classList.remove('active');
+}, 4000);
+
+setTimeout( function() {
+    document.querySelector('#traffic .yellow').classList.add('active');
+}, 4000);
+setTimeout( function() {
+    document.querySelector('#traffic .yellow').classList.remove('active');
+}, 6000);
+
+setTimeout( function() {
+    document.querySelector('#traffic .green').classList.add('active');
+}, 6000);
+setTimeout( function() {
+    document.querySelector('#traffic .green').classList.remove('active');
+}, 9000);
+
+setTimeout( function() {
+    document.querySelector('#traffic .yellow').classList.add('active');
+}, 9000);
+setTimeout( function() {
+    document.querySelector('#traffic .yellow').classList.remove('active');
+}, 11000);
+
+setTimeout( function() {
+    document.querySelector('#traffic .red').classList.add('active');
+}, 11000);
+setTimeout( function() {
+    document.querySelector('#traffic .red').classList.remove('active');
+}, 14000);
