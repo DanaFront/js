@@ -1,0 +1,12 @@
+.event {
+    display: inline-block;
+    height: 300px;
+    width: 300px;
+    cursor: pointer;
+    background-color: blue;
+}
+
+.color {
+    background-color: green;
+}
+
